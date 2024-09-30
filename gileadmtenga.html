@@ -49,14 +49,48 @@
       body {
         font-family: "arialregular", sans-serif;
       }
+
+      h1 {
+        font-family: "arial_blackitalic";
+        font-size: 64px;
+        font-style: italic;
+        font-weight: 400;
+        line-height: 75%; /* 48px */
+        letter-spacing: -7.04px;
+        margin-block-start: 0%;
+        margin-block-end: 0%;
+        color: white;
+      }
+
+      h1.stroke {
+        -webkit-text-stroke-width: 1px !important;
+        -webkit-text-stroke-color: #fff !important;
+        color: transparent !important;
+      }
+
+      h2 {
+        color: black;
+        font-family: "arialnarrow_bold_italic";
+        font-size: 24px;
+        font-style: italic;
+        font-weight: 700;
+        line-height: 150%; /* 36px */
+        letter-spacing: -0.24px;
+      }
     </style>
 
     <!--page styles-->
     <style>
       body {
-        background-color: blanchedalmond;
+        background-color: white;
         font-family: "arialregular", sans-serif;
+        min-height: 200vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
       }
+
       header {
         display: flex;
         padding: 30px;
@@ -65,12 +99,18 @@
         gap: 10px;
         align-self: stretch;
         mix-blend-mode: difference;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        box-sizing: border-box;
+        z-index: 99;
       }
 
       nav {
         display: flex;
+        height: 50px;
         justify-content: space-between;
-        align-items: center;
+        align-items: flex-start;
         align-self: stretch;
       }
 
@@ -78,7 +118,108 @@
         display: flex;
         padding: 10px;
         align-items: center;
-        border: var(--sds-size-stroke-border) solid #fff;
+        border: solid #fff;
+        border-width: 1px;
+      }
+
+      div.nav-links {
+        display: flex;
+        padding: 0px 30px;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-end;
+
+        font-family: "arialnarrow_italic";
+        color: #fff;
+      }
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+
+      a:hover {
+        opacity: 0.5;
+      }
+
+      section.hero {
+        height: 100vh;
+        display: flex;
+        padding: 100px 0px 100px 0px;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        align-self: stretch;
+        box-sizing: border-box;
+      }
+
+      div.title {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-items: flex-start;
+        gap: 10px;
+        position: sticky;
+        top: 30px;
+        width: 100%;
+        mix-blend-mode: difference;
+      }
+
+      div.contain {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        flex: 1 0 0;
+
+        max-width: 1080px;
+        width: 100%;
+        height: 100%;
+        padding-left: 110px;
+        padding-right: 110px;
+        box-sizing: border-box;
+      }
+
+      div.hero-copy {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 60px;
+        align-self: stretch;
+      }
+
+      a.button {
+        display: flex;
+        padding: 20px 30px;
+        flex-direction: column;
+        align-items: center;
+        color: black;
+        font-family: "arial_blackitalic";
+        font-size: 36px;
+        font-style: italic;
+        font-weight: 400;
+        line-height: 75%; /* 27px */
+        letter-spacing: -3.6px;
+        border-width: 1px;
+        border-color: black;
+        border: solid;
+      }
+
+      div.spacer-right {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        align-self: stretch;
+        width: 100%;
+      }
+
+      section.spacer {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        align-self: stretch;
+        box-sizing: border-box;
       }
     </style>
   </head>
@@ -91,8 +232,44 @@
             alt="GMT-header-logo"
           />
         </div>
-        <ul></ul>
+        <div class="nav-links">
+          <a href="">Services</a>
+          <a href="">Portfolio</a>
+          <a href="">Contact</a>
+          <a href="">About Gilead</a>
+        </div>
       </nav>
     </header>
+    <section class="hero">
+      <div class="contain">
+        <div class="title">
+          <h1 class="stroke">Gilead M. Tenga</h1>
+          <h1>Web Design</h1>
+          <h1>& Development</h1>
+        </div>
+        <div class="hero-copy">
+          <h2 style="width: 100%; text-align: right">
+            Your go-to freelancer for professional web design and brand
+            development
+          </h2>
+          <a class="button" href="#">GET A QUOTE</a>
+        </div>
+      </div>
+    </section>
+    <section class="spacer">
+      <div class="contain">
+        <div class="spacer-right">
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            width="444"
+            height="2"
+            viewBox="0 0 444 2"
+            fill="none"
+          >
+            <path d="M0 1H444" stroke="black" />
+          </svg>
+        </div>
+      </div>
+    </section>
   </body>
 </html>
