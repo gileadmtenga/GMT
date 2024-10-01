@@ -7,7 +7,7 @@
     <!--font styles-->
     <style>
       @font-face {
-        font-family: "arialregular";
+        font-family: "arial-regular";
         src: url("assets/arial-webfont.woff2") format("woff2"),
           url("assets/arial-webfont.woff") format("woff");
         font-weight: normal;
@@ -15,7 +15,7 @@
       }
 
       @font-face {
-        font-family: "arial_blackitalic";
+        font-family: "arial-black-italic";
         src: url("assets/arialblackitalic-webfont.woff2") format("woff2"),
           url("assets/arialblackitalic-webfont.woff") format("woff");
         font-weight: normal;
@@ -23,7 +23,7 @@
       }
 
       @font-face {
-        font-family: "arialnarrow_bold_italic";
+        font-family: "arialnarrow-bold-italic";
         src: url("assets/arialnbi-webfont.woff2") format("woff2"),
           url("assets/arialnbi-webfont.woff") format("woff");
         font-weight: normal;
@@ -31,7 +31,7 @@
       }
 
       @font-face {
-        font-family: "arialnarrow_italic";
+        font-family: "arialnarrow-italic";
         src: url("assets/arialni-webfont.woff2") format("woff2"),
           url("assets/arialni-webfont.woff") format("woff");
         font-weight: normal;
@@ -39,7 +39,7 @@
       }
 
       @font-face {
-        font-family: "arialbold";
+        font-family: "arial-bold";
         src: url("assets/arialbd-webfont.woff2") format("woff2"),
           url("assets/arialbd-webfont.woff") format("woff");
         font-weight: normal;
@@ -47,35 +47,34 @@
       }
 
       body {
-        font-family: "arialregular", sans-serif;
+        font-family: "arial-regular", sans-serif;
       }
 
       h1 {
-        font-family: "arial_blackitalic";
+        font-family: "arial-black-italic";
         font-size: 64px;
         font-style: italic;
-        font-weight: 400;
-        line-height: 75%; /* 48px */
-        letter-spacing: -7.04px;
+        line-height: 75%;
+        letter-spacing: calc(-0.09 * 64px);
         margin-block-start: 0%;
         margin-block-end: 0%;
         color: white;
       }
 
       h1.stroke {
-        -webkit-text-stroke-width: 1px !important;
-        -webkit-text-stroke-color: #fff !important;
-        color: transparent !important;
+        color: black;
+        text-shadow: -1px -1px 0 white, 1px -1px 0 white, -1px 1px 0 white,
+          1px 1px 0 white;
       }
 
       h2 {
         color: black;
-        font-family: "arialnarrow_bold_italic";
+        font-family: "arialnarrow-bold-italic";
         font-size: 24px;
         font-style: italic;
         font-weight: 700;
         line-height: 150%; /* 36px */
-        letter-spacing: -0.24px;
+        letter-spacing: calc(-0.05 * 24px);
       }
     </style>
 
@@ -83,11 +82,11 @@
     <style>
       body {
         background-color: white;
-        font-family: "arialregular", sans-serif;
+        font-family: "arial-regular", sans-serif;
         min-height: 200vh;
         display: flex;
         flex-direction: column;
-        justify-content: center;
+        justify-content: flex-start;
         align-items: center;
       }
 
@@ -128,9 +127,10 @@
         flex-direction: column;
         justify-content: center;
         align-items: flex-end;
-
-        font-family: "arialnarrow_italic";
+        font-family: "arialnarrow-italic";
         color: #fff;
+        font-size: 16px;
+        letter-spacing: calc(-0.05 * 16px);
       }
 
       a {
@@ -171,13 +171,16 @@
         justify-content: space-between;
         align-items: center;
         flex: 1 0 0;
-
         max-width: 1080px;
         width: 100%;
         height: 100%;
         padding-left: 110px;
         padding-right: 110px;
         box-sizing: border-box;
+      }
+
+      div.contain.stretch {
+        justify-content: space-between;
       }
 
       div.hero-copy {
@@ -194,7 +197,7 @@
         flex-direction: column;
         align-items: center;
         color: black;
-        font-family: "arial_blackitalic";
+        font-family: "arial-black-italic";
         font-size: 36px;
         font-style: italic;
         font-weight: 400;
@@ -241,7 +244,7 @@
       </nav>
     </header>
     <section class="hero">
-      <div class="contain">
+      <div class="contain stretch">
         <div class="title">
           <h1 class="stroke">Gilead M. Tenga</h1>
           <h1>Web Design</h1>
